@@ -1,30 +1,18 @@
-//Destructuring
-interface Reproductor{
-    volumen:number,
-    segundo:number,
-    cancion:string,
-    detalles:Detalles
-}
+//Clases
+//Las clases las vamos a utilizar para trabajar con nuestros objetos mientras que las interfaces son para el tipado
 
-interface Detalles{
-    autor:string,
-    anio:number,
-}
-
-const reproductor:Reproductor={
-    volumen:50,
-    segundo:36,
-    cancion: 'la chona',
-    detalles:{
-        autor: 'Los tucanes de tijuana',
-        anio: 1995
+class Pokemon{
+    static algo:string;
+    constructor(
+        public nombre:string,
+        public habilidad:string,
+        public pAtaque:number
+    ){
     }
 }
 
-const {volumen,segundo,cancion,detalles:{autor:autorDetalle}} = reproductor;
-const {autor} = reproductor.detalles;
+const pkm = new Pokemon('Pikachu', 'ImpacTrueno', 40);
+console.log(pkm);
 
-console.log('El volumen actual es: ', volumen)
-console.log('El segundo actual es: ', segundo)
-console.log('El volumen actual es: ', cancion)
-console.log('El autor actual es: ', autor)
+//Diseñar una función que permita luchar a 2 o n pokemones 
+//y nos diga cual es el ganador después de una resta al ser afectado por los otros puntos de ataque
