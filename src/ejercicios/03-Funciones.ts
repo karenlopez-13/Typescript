@@ -30,19 +30,19 @@ function conversion(numero:number, otro_numero?:number, base:number=2):number{ /
 const resultadoConversion = conversion(10,10);
 console.log(resultadoConversion);
 
-interface Pokemon{
+interface Pokemonn{
     nombre:string,
     puntosVida:number,
     mostrarPV:()=>void;
 }
 
-function curar(pokemon:Pokemon,curarP):void{
+function curar(pokemon:Pokemonn,curarP):void{
     //return undefined; //en caso de no declalarlo como void
     pokemon.puntosVida += curarP;
     console.log(pokemon);
 }
 
-const nuevoPokemon: Pokemon = {
+const nuevoPokemon: Pokemonn = {
     nombre: "Charmander",
     puntosVida: 50,
     //también podemos precargar las funciones
